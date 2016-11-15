@@ -3,7 +3,7 @@ package com.amitpamecha.adapter.demo;
 public class TestAdapterPattern {
 
     public static void main(String[] args) {
-        // Object for Xpay
+        // Object for XPay
         XPay xpay = new XpayImpl();
         xpay.setCreditCardNo("4789565874102365");
         xpay.setCustomerName("Max Warner");
