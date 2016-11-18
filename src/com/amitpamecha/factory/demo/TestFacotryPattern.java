@@ -5,16 +5,26 @@ public class TestFacotryPattern {
     public static void main(String args[]) {
 
         String xml = "<error> error message </error>";
-        DisplayService displayService = new DisplayService();
-        displayService.display("ERROR",xml);
+        XMLParserFactory xmlParserFactory = new XMLParserFactory();
+        XMLParser parser = xmlParserFactory.getParser("ERROR");
+        String msg = parser.parse(xml);
+        System.out.println(msg);
+        
+        System.out.println("***********************************************");
         
         xml = "<feedback> feedback message </feedback>";
-        displayService = new DisplayService();
-        displayService.display("FEEDBACK",xml);
+        parser = xmlParserFactory.getParser("FEEDBACK");
+        msg = parser.parse(xml);
+        System.out.println(msg);
+        
+        System.out.println("***********************************************");
         
         xml = "<order> order request </order>";
-        displayService = new DisplayService();
-        displayService.display("ORDER",xml);
+        parser = xmlParserFactory.getParser("ORDER");
+        msg = parser.parse(xml);
+        System.out.println(msg);
+        
+        System.out.println("***********************************************");
         
     }
 }
